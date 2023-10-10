@@ -21,40 +21,40 @@ type V0038Signal int32
 
 // List of v0.0.38_signal
 const (
-	HUP V0038Signal = "HUP"
-	INT V0038Signal = "INT"
-	QUIT V0038Signal = "QUIT"
-	ABRT V0038Signal = "ABRT"
-	KILL V0038Signal = "KILL"
-	ALRM V0038Signal = "ALRM"
-	TERM V0038Signal = "TERM"
-	USR1 V0038Signal = "USR1"
-	USR2 V0038Signal = "USR2"
-	URG V0038Signal = "URG"
-	CONT V0038Signal = "CONT"
-	STOP V0038Signal = "STOP"
-	TSTP V0038Signal = "TSTP"
-	TTIN V0038Signal = "TTIN"
-	TTOU V0038Signal = "TTOU"
+	HUP V0038Signal = iota
+	INT
+	QUIT
+	ABRT
+	KILL
+	ALRM
+	TERM
+	USR1
+	USR2
+	URG
+	CONT
+	STOP
+	TSTP
+	TTIN
+	TTOU
 )
 
 // All allowed values of V0038Signal enum
 var AllowedV0038SignalEnumValues = []V0038Signal{
-	"HUP",
-	"INT",
-	"QUIT",
-	"ABRT",
-	"KILL",
-	"ALRM",
-	"TERM",
-	"USR1",
-	"USR2",
-	"URG",
-	"CONT",
-	"STOP",
-	"TSTP",
-	"TTIN",
-	"TTOU",
+	HUP,
+	INT,
+	QUIT,
+	ABRT,
+	KILL,
+	ALRM,
+	TERM,
+	USR1,
+	USR2,
+	URG,
+	CONT,
+	STOP,
+	TSTP,
+	TTIN,
+	TTOU,
 }
 
 func (v *V0038Signal) UnmarshalJSON(src []byte) error {
